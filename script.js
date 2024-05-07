@@ -18,3 +18,17 @@ function addTask() {
     /**clears the box after entry*/
     inputBox.value = "";
 }
+
+/*For the click function*/
+listContainer.addEventListener("click", function(e){
+    /**E is accepted for var for event object, here a mouse event */
+
+    /**If clicked on LI, then call 'checked' class in css*/
+    if(e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
+    }
+    /**Else if clicking on span, remove parent element (i.e. element above it in the html), so deletes it*/
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+    }
+}, false);
