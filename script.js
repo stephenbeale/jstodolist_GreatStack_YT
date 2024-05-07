@@ -17,6 +17,8 @@ function addTask() {
     }
     /**clears the box after entry*/
     inputBox.value = "";
+    /**Saves data after any box added*/
+    saveData();
 }
 
 /*For the click function*/
@@ -30,6 +32,7 @@ listContainer.addEventListener("click", function(e){
     /**Else if clicking on span, remove parent element (i.e. element above it in the html), so deletes it*/
     else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        saveData();
     }
 }, false);
 
