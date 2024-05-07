@@ -32,3 +32,10 @@ listContainer.addEventListener("click", function(e){
         e.target.parentElement.remove();
     }
 }, false);
+
+/**To handle saving data on close/refresh
+ * Saves all data currently held within listContainer's html
+ */
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
+}
