@@ -82,5 +82,10 @@ ul li::before {
 }
 /*Called for any sublist items in an unordered list with the 'checked' class property*/
 ul li.checked {
-  /**https: //youtu.be/G0jO8kUrg-I?si=PuHazAuoQ4116fOq&t=728*/
+  color: #555;
+  text-decoration: line-through;
+}
+/*Displays a list item with a ticked box*/
+ul li.checked::before{
+    background-image: url(images/checked.png);
 }
