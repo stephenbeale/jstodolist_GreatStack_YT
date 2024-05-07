@@ -80,7 +80,8 @@ ul li::before {
   top: 12px;
   left: 8px;
 }
-/*Called for any sublist items in an unordered list with the 'checked' class property*/
+/*Called for any sublist items in an unordered list with the 'checked' class property
+Strikes through text of ticked items in list*/
 ul li.checked {
   color: #555;
   text-decoration: line-through;
@@ -88,4 +89,21 @@ ul li.checked {
 /*Displays a list item with a ticked box*/
 ul li.checked::before{
     background-image: url(images/checked.png);
+}
+/*For span icon*/
+ul li span{
+    position: absolute;
+    /*pixels FROM the right/top etc*/
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    /*Essentially just aligns the cross icon on the space allocated*/
+    text-align: center;
+}
+ul li span:hover{
+    background: #edeef0;
 }
